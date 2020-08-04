@@ -20,5 +20,5 @@ from learning_logs import urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(urls), name='logs'),
+    path('', include(urls), name='learning_logs'),
 ]
