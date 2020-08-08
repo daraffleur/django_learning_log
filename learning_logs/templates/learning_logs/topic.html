@@ -13,7 +13,7 @@
                 <p>{{ entry.date_added }}</p>
                 <P>{{ entry.text }}</P>
                     <p>
-                        <a href="{% url 'edit entry' entry.id %}">Edit Entry</a>
+                        <a href="{% url 'edit_entry' entry.id %}">Edit Entry</a>
                     </p>
             </li>
             {% empty %}
