@@ -4,17 +4,20 @@
     <p>Topic: {{ topic }}</p>
 
     <p>Entries:</p>
+    <p>
+        <a href="{% url "new_entry" topic.id %}">Add new entry</a>
+    </p>
     <ul>
-    {% for entry in entries %}
-        <li>
-            <p>{{ entry.date_added}}</p>
-            <P>{{ entry.text }}</P>
-        </li>
-    {% empty %}
-        <li>
-            There are no entries for this topic yet.
-        </li>
-    {% endfor %}
+        {% for entry in entries %}
+            <li>
+                <p>{{ entry.date_added }}</p>
+                <P>{{ entry.text }}</P>
+            </li>
+            {% empty %}
+            <li>
+                There are no entries for this topic yet.
+            </li>
+        {% endfor %}
     </ul>
 
-{% endblock content%}
+{% endblock content %}
